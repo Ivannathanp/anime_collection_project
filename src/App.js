@@ -16,7 +16,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/anime_collection_project">
       <ApolloProvider client={client}>
         <Switch>
           

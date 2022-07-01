@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ivannathanp.github.io/anime_collection_project",
   "name": "anime_collections_project",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +20,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "formik": "^2.2.9",
+    "gh-pages": "^4.0.0",
     "graphql": "^16.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,9 +32,11 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "set PORT=7000 && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "dev": "nodemon Server.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
