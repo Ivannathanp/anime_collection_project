@@ -69,14 +69,14 @@ function CollectionDetailPage() {
     const animes = getCollection[findIndex].animes;
     console.log(animes)
     const removeAnime = animes.findIndex(
-      (remove) => remove.collectionName === removedAnime
+      (remove) => remove.title === removedAnime
     );
     console.log(removeAnime)
     animes.splice(removeAnime, 1);
 
     console.log(getCollection)
-    // localStorage.setItem("collections", JSON.stringify(getCollection));
-    // setDeleteModalOpen(false);
+    localStorage.setItem("collections", JSON.stringify(getCollection));
+    setDeleteModalOpen(false);
   };
 
   const findIndex = getCollection.findIndex(
